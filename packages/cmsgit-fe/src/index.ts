@@ -1,1 +1,1 @@
-export default () => 'hi'
+export default (): number => 2
