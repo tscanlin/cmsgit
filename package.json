@@ -1,0 +1,15 @@
+{
+	"devDependencies": {
+		"lerna": "^2.2.0"
+	},
+	"name": "cmsgit",
+	"version": "1.0.0",
+	"description": "Git based cms",
+	"main": "index.js",
+	"repository": "git@github.com:tscanlin/cmsgit.git",
+	"author": "Tim Scanlin <tscanlin@gmail.com>",
+	"license": "MIT",
+	"dependencies": {
+		"next": "^3.2.2"
+	}
+}
