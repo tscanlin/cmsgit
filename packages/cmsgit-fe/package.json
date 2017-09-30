@@ -1,11 +1,21 @@
 {
-	"name": "cmsgit",
+	"name": "cmsgit-fe",
 	"version": "1.0.0",
 	"description": "Git based cms",
 	"main": "index.js",
+	"scripts": {
+		"dev": "next",
+		"build": "next build",
+		"start": "next start"
+	},
 	"repository": "git@github.com:tscanlin/cmsgit.git",
 	"author": "Tim Scanlin <tscanlin@gmail.com>",
 	"license": "MIT",
+	"dependencies": {
+		"next": "^4.0.0-beta.2",
+		"react": "^16.0.0",
+		"react-dom": "^16.0.0"
+	},
 	"devDependencies": {
 		"lerna": "^2.2.0"
 	}
