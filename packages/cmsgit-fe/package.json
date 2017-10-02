@@ -1,7 +1,7 @@
 {
 	"name": "cmsgit-fe",
 	"version": "1.0.0",
-	"description": "Git based cms",
+	"description": "Git based cms - fronted",
 	"main": "index.js",
 	"scripts": {
 		"dev": "next",
@@ -15,8 +15,5 @@
 		"next": "^4.0.0-beta.2",
 		"react": "^16.0.0",
 		"react-dom": "^16.0.0"
-	},
-	"devDependencies": {
-		"lerna": "^2.2.0"
 	}
 }
