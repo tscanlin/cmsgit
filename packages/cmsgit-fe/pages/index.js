@@ -4,7 +4,7 @@ console.log(Head)
 
 const clientId = '4ea695b1a963ea3efab2'
 const scope = 'user:email,public_repo,repo'
-const redirectUri = 'http://localhost:3000/'
+const redirectUri = 'https://api.cmsgit.com/v1-dev/callback'
 const randomString = Math.random().toString(36)
 
 export default function Index (props) {

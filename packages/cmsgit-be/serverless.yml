@@ -56,10 +56,17 @@ region: us-east-1
 
 functions:
   hello:
-    handler: handlers/hello
+    handler: handlers/hello.default
     events:
       - http:
           path: hello
+          method: get
+          cors: true
+  callback:
+    handler: handlers/callback.default
+    events:
+      - http:
+          path: callback
           method: get
           cors: true
 
