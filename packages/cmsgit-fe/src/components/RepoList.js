@@ -1,4 +1,4 @@
-export default function Auth (props) {
+export default function RepoList (props) {
   return (
     <div>
       as

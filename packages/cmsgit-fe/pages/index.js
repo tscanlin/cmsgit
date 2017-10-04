@@ -16,7 +16,6 @@ import getInitialState from '../src/utils/state'
 
 export default function Index (props) {
   const state = getInitialState()
-  console.log(state);
 
   return (
     <div>
@@ -31,10 +30,10 @@ export default function Index (props) {
           Cmsgit
         </h1>
 
-        {state.authed ? (
-          <Auth />
-        ) : (
+        {!state.accessToken ? (
           <NoAuth config={config} />
+        ) : (
+          <Auth />
         )}
       </main>
     </div>
