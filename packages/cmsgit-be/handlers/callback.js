@@ -60,9 +60,7 @@ exports.default = (event, context, callback) => {
       statusCode: 302,
       headers: {
         'Location': returnUri,
-        'Set-Cookie': `accessToken=${data.access_token}; Domain=${domain}; Path=/;`,
-        'Set-cookie': `scope=${data.scope}; Domain=${domain}; Path=/;`
-
+        'Set-Cookie': `githubAuth=${JSON.stringify({ accessToken: data.access_token, scope: data.scope })}; Domain=${domain}; Path=/;`
       }
       // body: JSON.stringify({ data })
     }

@@ -1,5 +1,7 @@
 import Head from 'next/head'
 
+import Auth from '../src/components/Auth'
+import NoAuth from '../src/components/NoAuth'
 // function makeRequest(e) {
 //   e.preventDefault()
 //   console.log(e)
@@ -8,13 +10,13 @@ import Head from 'next/head'
 //   })
 // }
 
+import config from '../config'
+
+import getInitialState from '../src/utils/state'
+
 export default function Index (props) {
-  console.log(props)
-  const clientId = '4ea695b1a963ea3efab2'
-  const scope = 'user:email,public_repo,repo'
-  const redirectUri = 'https://api.cmsgit.com/v1-dev/callback'
-  const randomString = Math.random().toString(36)
-  const url = `https://github.com/login/oauth/authorize?scope=${scope}&client_id=${clientId}&redirect_uri=${redirectUri}&state=${randomString}`
+  const state = getInitialState()
+  console.log(state);
 
   return (
     <div>
@@ -26,11 +28,14 @@ export default function Index (props) {
       </Head>
       <main className='sans-serif ma4'>
         <h1>
-          Test!
+          Cmsgit
         </h1>
-        <a href={url}>
-          Click here
-        </a>
+
+        {state.authed ? (
+          <Auth />
+        ) : (
+          <NoAuth config={config} />
+        )}
       </main>
     </div>
   )
