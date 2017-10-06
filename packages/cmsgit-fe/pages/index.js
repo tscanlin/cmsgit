@@ -12,11 +12,10 @@ import NoAuth from '../src/components/NoAuth'
 
 import config from '../config'
 
-import getInitialState from '../src/utils/state'
+import getAuthData from '../src/utils/auth'
 
 export default function Index (props) {
-  const state = getInitialState()
-
+  const authData = getAuthData()
   return (
     <div>
       <Head>
@@ -30,10 +29,13 @@ export default function Index (props) {
           Cmsgit
         </h1>
 
-        {!state.accessToken ? (
+        {!authData.accessToken ? (
           <NoAuth config={config} />
         ) : (
-          <Auth />
+          <Auth
+            config={config}
+            authData={authData}
+          />
         )}
       </main>
     </div>
